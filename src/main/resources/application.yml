@@ -1,0 +1,21 @@
+server:
+  port: 8000
+spring:
+  application:
+    name: mvp-store-api
+  datasource:
+    url: jdbc:h2:mem:test_db
+    driver-class-name: org.h2.Driver
+    username: sa
+    password: password
+  h2:
+    console:
+      enabled: true
+      settings:
+        web-allow-others: true
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    open-in-view: false
+logging:
+  level:
+    org.springframework.security: DEBUG
